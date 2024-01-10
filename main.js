@@ -27,13 +27,13 @@ const SPAMMY = '${SPAMMY}' === 'true';
      * @type {{xm: hotkey_execution.xm, xp: hotkey_execution.xp}}
      */
     const hotkey_execution= {
-        'xp': (event) => {
+        'xp': () => {
             window.location = `${base_url}/jira/projects`;
         },
-        'xm': (event) => {
+        'xm': () => {
             window.location = `${base_url}/browse/${project_prefix}`;
         },
-        'xi': (event) => {
+        'xi': () => {
             window.location = `${base_url}/jira/software/c/projects/MSGR/issues/?filter=allissues&jql=project%20%3D%20"MSGR"%20and%20assignee%20%3D%20currentUser%28%29%20ORDER%20BY%20created%20DESC`;
         },
         'Enter': (event) => {
